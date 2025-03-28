@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>技術ブログ風 掲示板</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/">📝 技術ブログ風 掲示板</a></h1>
+    <nav>
+      <a href="/">一覧</a> |
+      <a href="/new">新規投稿</a>
+    </nav>
+  </header>
+  <main>
+    <%= yield %>
+  </main>
+  <footer>
+    &copy; <%= Time.now.year %> MyBoard
+  </footer>
+</body>
+</html>

@@ -1,0 +1,163 @@
+:root {
+  --primary: #2563eb;
+  /* Indigo-600 */
+  --primary-light: #3b82f6;
+  /* Blue-500 */
+  --background: #f4f4f5;
+  /* Zinc-100 */
+  --foreground: #1f2937;
+  /* Gray-800 */
+  --card-bg: #ffffff;
+  --border: #e5e7eb;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+header h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav a {
+  color: #e0e7ff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+}
+
+main {
+  padding: 2rem;
+  max-width: 720px;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #999;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.post {
+  background: var(--card-bg);
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.post h2 {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+  color: var(--primary);
+}
+
+.post .timestamp {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.8rem;
+}
+
+.post .body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.post .actions {
+  margin-top: 1rem;
+}
+
+.post .actions a,
+.post .actions button {
+  font-size: 0.9rem;
+  margin-right: 1rem;
+  color: var(--primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+form input[type=\"text\"],
+form textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 1rem;
+  background: white;
+}
+
+form button {
+  padding: 0.6rem 1.2rem;
+  background: var(--primary-light);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: var(--primary);
+}
+
+/* モバイル対応 */
+@media (max-width: 600px) {
+  body {
+    font-size: 1rem;
+  }
+
+  header,
+  footer {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  header nav {
+    margin-top: 0.5rem;
+  }
+
+  header nav a {
+    display: inline-block;
+    margin: 0.25rem 0.5rem;
+  }
+
+  .post {
+    padding: 1rem;
+  }
+
+  form button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  form input[type="text"],
+  form textarea {
+    font-size: 1rem;
+  }
+}

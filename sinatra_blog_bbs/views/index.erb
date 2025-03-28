@@ -1,0 +1,17 @@
+<% if @posts.empty? %>
+  <p>まだ投稿がありません。</p>
+<% else %>
+  <% @posts.each do |post| %>
+    <article class="post">
+      <h2><%= post["title"] %></h2>
+      <p class="timestamp"><%= post["created_at"] %></p>
+      <div class="body"><%= post["body"] %></div>
+      <div class="actions">
+        <a href="/edit/<%= post["id"] %>">編集</a>
+        <form action="/delete/<%= post["id"] %>" method="post" onsubmit="return confirm('削除してよろしいですか？');" style="display:inline">
+          <button type="submit">削除</button>
+        </form>
+      </div>
+    </article>
+  <% end %>
+<% end %>
